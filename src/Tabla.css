@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans", Futura, Arial, sans-serif;
+    max-width: 1000px;
+
+}
+.contenedor-tabla {
+    margin: 10px 0px;
+    height: auto;
+    overflow-x: auto;
+}
+
+
+.contenedor-boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+
+.btn-agregar{
+    background-color: green;
+    color: white;
+    font-size: 1.8em;
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    border-style: none;
+    margin: 0px 5px;
+    cursor: pointer;
+
+}
+
+.btn-quitar{
+    background-color: #d62828;
+    color: white;
+    font-size: 1.8em;
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    border-style: none;
+    cursor: pointer;
+}
+
+.div-calcular{
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.btn-calcular{
+    background-color: #003459;
+    color: white;
+    font-size: 1.8em;
+    height: 40px;
+    border-radius: 20px 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+
+
+
+th,
+td {
+    padding: 4px 4px;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+th{
+    background-color: rgb(165, 165, 165);
+}
+
+tr:nth-child(even) {
+    background-color: #e6e6e6; /* Gray background color */
+  }
+  
+  /* Style for odd rows (0-based index) */
+  tr:nth-child(odd) {
+    background-color: #ffffff; /* White background color */
+  }
+  
+
+/* Styles specific to mobile devices */
+@media (max-width: 768px) {
+    .tabla-head {
+        font-size: 12px; /* Reduce font size for table headers */
+    }
+
+    th,
+    td {
+        font-size: 14px; /* Reduce font size for table cells */
+    }
+}
+

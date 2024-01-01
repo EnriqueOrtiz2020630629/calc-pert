@@ -1,0 +1,29 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px
+}
+
+#root{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (min-width: 768px) {
+    body {
+      font-size: 18px; /* Adjust font size for devices with a minimum width of 768px */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    body {
+      font-size: 20px; /* Adjust font size for devices with a minimum width of 1024px */
+    }
+  }
+  

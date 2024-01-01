@@ -1,0 +1,15 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: #0080fe;
+    color: white;
+    font-family: 'Open Sans', Futura, Arial, sans-serif;
+    font-size: 2em;
+}
+
+.nav-imagen{
+    height: 3rem;
+    margin: 0 10px 0 5px;
+}
