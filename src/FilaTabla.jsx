@@ -17,13 +17,16 @@ export default function FilaTabla({actualizarAct, act, listaAct}) {
         actualizarAct({...act, precedente: nuevoPrecedente})
     }
 
-    
     return (
         <tr>
             <td className="td-nombre">{act.nombre}</td>
             <td className="td-precedente">
                 {act.precedente.map(prec => {
-                    return <div>{prec}<button onClick={() => quitarPrecedente(prec)}>x</button></div>
+                    return(
+                        <div className="prec-cont">
+                            {prec}
+                            <button onClick={() => quitarPrecedente(prec)}>x</button>
+                        </div>)
                 })}
                 <div className="custom-dropdown">
                     <button className="custom-btn" onClick={toggleDropdown}>

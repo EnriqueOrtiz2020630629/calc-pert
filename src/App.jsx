@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import Tabla from "./Tabla";
 import TablaSemanas from "./TablaSemanas";
 
-
 export default function App() {
     const [rutaCritica, setRutaCritica] = useState([]);
     const [duracionProyecto, setDuracionProyecto] = useState(0);
@@ -22,25 +21,27 @@ export default function App() {
                 setMinSemanas={setMinSemanas}
                 setDesvStd={setDesvStd}
             />
-            {rutaCritica.length > 0 && 
-                <div>
-                    La ruta critica del proyecto es: {rutaCritica}
-                </div>
-            }
+            
 
-            {duracionProyecto > 0 && 
+            {duracionProyecto > 0 && (
                 <div>
-                    El proyecto tiene 50% de probabilidades de terminarse en {duracionProyecto} semanas
+                    El proyecto tiene 50% de probabilidades de terminarse en{" "}
+                    <b>{duracionProyecto}</b> semanas
                 </div>
-            }
+            )}
 
-            {minSemanas && maxSemanas &&
+            {rutaCritica.length > 0 && (
+                <div>La ruta critica del proyecto es: <b>{rutaCritica}</b></div>
+            )}
+
+            {minSemanas !== 0 && maxSemanas !== 0 && (
                 <TablaSemanas
                     maxSemanas={maxSemanas}
                     minSemanas={minSemanas}
                     duracionProyecto={duracionProyecto}
                     desvStd={desvStd}
-                />}
+                />
+            )}
         </>
     );
 }

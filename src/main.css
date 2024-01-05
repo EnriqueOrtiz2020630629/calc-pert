@@ -5,25 +5,28 @@ html {
 }
 
 body{
-    font-size: 16px
+  font-family: 'Open Sans', Futura, Arial, sans-serif;
+  font-size: 16px
 }
 
 #root{
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 
 @media (min-width: 768px) {
     body {
-      font-size: 18px; /* Adjust font size for devices with a minimum width of 768px */
+      font-size: 18px;
     }
   }
   
   @media (min-width: 1024px) {
     body {
-      font-size: 20px; /* Adjust font size for devices with a minimum width of 1024px */
+      font-size: 20px;
     }
   }
   

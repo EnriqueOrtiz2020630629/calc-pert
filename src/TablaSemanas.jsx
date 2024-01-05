@@ -1,4 +1,6 @@
 import jStat from "jstat";
+import "./TablaSemanas.css";
+
 export default function TablaSemanas ({minSemanas, maxSemanas, desvStd, duracionProyecto}){
 
     const zScore = (semana, promedio, desvStd) => {
@@ -10,25 +12,21 @@ export default function TablaSemanas ({minSemanas, maxSemanas, desvStd, duracion
     const weeks = Array.from({ length: maxSemanas - minSemanas + 1 }, (_, index) => minSemanas + index);
 
     return (
-        <table>
-            <thead>
+        <div className="tabla-sem-container">
+            <table>
                 <tr>
                     <th>Semanas</th>
                     <th>Probabilidad</th>
                 </tr>
-            </thead>
-            <tbody>
             {weeks.map((sem, index) => (
                     <tr key={index}> 
                         <td>{sem}</td>
                         <td>{zScore(sem, duracionProyecto, desvStd)} %</td>
                     </tr>))}
-            
-            </tbody>
-            
+                        
         </table>
+        </div>
+
+        
     )
 }
-
-/*                            
-*/

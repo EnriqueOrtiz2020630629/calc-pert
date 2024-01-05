@@ -67,21 +67,19 @@ export default function Tabla({setDuracionProyecto, setRutaCritica, setMinSemana
     }, [listaAct]);
 
     return (
-        <div className="container">
-            <div className="contenedor-tabla">
-                <table className="tabla">
-                    <thead>
+        <div class="main-container">
+            <div className="tabla-container">
+                <table>
                         <tr>
                             <th>Actividad</th>
                             <th>Precedente</th>
-                            <th className="tabla-head">Tiempo optimista</th>
-                            <th className="tabla-head">Tiempo mas probable</th>
-                            <th className="tabla-head">Tiempo pesimista</th>
-                            <th className="tabla-head">Tiempo esperado</th>
+                            <th>Tiempo optimista</th>
+                            <th>Tiempo mas probable</th>
+                            <th>Tiempo pesimista</th>
+                            <th>Tiempo esperado</th>
                             <th>Varianza</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        
                         {listaAct.map((act) => (
                             <FilaTabla
                                 key={act.nombre}
@@ -90,21 +88,13 @@ export default function Tabla({setDuracionProyecto, setRutaCritica, setMinSemana
                                 listaAct={listaAct}
                             />
                         ))}
-                    </tbody>
                 </table>
-                
             </div>
 
-            <div className="contenedor-boton">
-                <div>
+            <div className="btn-container">
                     <button className="btn-agregar" onClick={agregarAct}>+</button>
-                </div>
-                <div>
                     <button className="btn-quitar" onClick={quitarAct}>-</button>
-                </div>
-                <div className="div-calcular">
                     <button className="btn-calcular" onClick={calcularPERT}>Calcular</button>
-                </div>
             </div>
 
 

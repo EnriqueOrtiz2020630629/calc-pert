@@ -1,24 +1,34 @@
-.container {
+.tabla-container th{
+    background-color: rgb(165, 165, 165);
+    padding: 4px 4px;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.tabla-container {
+    max-width: 100vw;
+    overflow-x: auto;
+
+}
+
+
+.main-container {
     display: flex;
     flex-direction: column;
-    font-family: "Open Sans", Futura, Arial, sans-serif;
-    max-width: 1000px;
-
-}
-.contenedor-tabla {
-    margin: 10px 0px;
-    height: auto;
-    overflow-x: auto;
 }
 
+.tabla-container td {
+    padding: 4px 4px;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+}
 
-.contenedor-boton{
+.btn-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
 }
-
-
 
 .btn-agregar{
     background-color: green;
@@ -41,12 +51,8 @@
     height: 40px;
     border-radius: 20%;
     border-style: none;
+    margin: 0px 5px;
     cursor: pointer;
-}
-
-.div-calcular{
-    margin-left: auto;
-    margin-right: 5px;
 }
 
 .btn-calcular{
@@ -56,23 +62,44 @@
     height: 40px;
     border-radius: 20px 10px;
     border-style: none;
+    margin-left: auto;
     cursor: pointer;
 }
 
+/*re*/
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans", Futura, Arial, sans-serif;
+    max-width: 1000px;
 
-
-
-th,
-td {
-    padding: 4px 4px;
-    text-align: center;
-    white-space: normal;
-    word-wrap: break-word;
 }
 
-th{
-    background-color: rgb(165, 165, 165);
+
+.contenedor-boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
+
+
+
+
+
+
+.div-calcular{
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
 
 tr:nth-child(even) {
     background-color: #e6e6e6; /* Gray background color */
